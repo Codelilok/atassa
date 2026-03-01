@@ -1206,7 +1206,8 @@ gmd(
 
           if (
             presence?.lastKnownPresence === "composing" ||
-            presence?.lastKnownPresence === "recording"
+            presence?.lastKnownPresence === "recording" ||
+            presence?.lastKnownPresence === "available"
           ) {
             let displayJid = participantId;
             if (participantId.endsWith("@lid")) {
@@ -1708,7 +1709,7 @@ gmd(
   {
     pattern: "everyone",
     react: "📢",
-    aliases: ["everyone", "tag", "tagall1", "mention"],
+    aliases: ["tag", "all", "mention"],
     category: "group",
     description: "Tag everyone in the group with custom message",
   },
@@ -2000,7 +2001,7 @@ gmd(
   {
     pattern: "tagall",
     react: "📢",
-    aliases: ["all", "mentionall"],
+    aliases: ["mentionall"],
     category: "group",
     description: "Tag all group members with optional message",
   },
